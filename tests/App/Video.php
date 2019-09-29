@@ -1,13 +1,13 @@
 <?php
 
-namespace Askedio\Tests\App;
+namespace JangraViren\Tests\App;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Video extends Model
 {
     use \Illuminate\Database\Eloquent\SoftDeletes;
-    use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
+    use \JangraViren\SoftCascade\Traits\SoftCascadeTrait;
     use \Illuminate\Database\Eloquent\SoftDeletes;
 
     protected $table = 'videos';
@@ -21,6 +21,6 @@ class Video extends Model
      */
     public function comments()
     {
-        return $this->morphMany('Askedio\Tests\App\Comment', 'commentable');
+        return $this->morphMany('JangraViren\Tests\App\Comment', 'commentable');
     }
 }

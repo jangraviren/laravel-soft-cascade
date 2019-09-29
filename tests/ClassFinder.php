@@ -1,6 +1,6 @@
 <?php
 
-namespace Askedio\Tests;
+namespace JangraViren\Tests;
 
 use Symfony\Component\Finder\Finder;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Askedio\Tests\App;
+namespace JangraViren\Tests\App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,11 +12,11 @@ class Addresses extends Model
 
     public function language()
     {
-        return $this->belongsTo('Askedio\Tests\App\Languages');
+        return $this->belongsTo('JangraViren\Tests\App\Languages');
     }
 
     public function profile()
     {
-        return $this->belongsTo('Askedio\Tests\App\Profile');
+        return $this->belongsTo('JangraViren\Tests\App\Profile');
     }
 }

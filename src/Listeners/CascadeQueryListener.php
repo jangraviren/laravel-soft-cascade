@@ -1,8 +1,8 @@
 <?php
 
-namespace Askedio\SoftCascade\Listeners;
+namespace JangraViren\SoftCascade\Listeners;
 
-use Askedio\SoftCascade\QueryBuilderSoftCascade;
+use JangraViren\SoftCascade\QueryBuilderSoftCascade;
 use Illuminate\Support\Str;
 
 class CascadeQueryListener

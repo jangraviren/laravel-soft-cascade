@@ -43,13 +43,13 @@ From Laravel 5.5 onwards, it's possible to take advantage of auto-discovery of t
 For Laravel versions before 5.5, you must register the service provider in your config/app.php
 
 ~~~
-Askedio\SoftCascade\Providers\GenericServiceProvider::class,
+JangraViren\SoftCascade\Providers\GenericServiceProvider::class,
 ~~~
 
 Lumen does not support the auto-discovery feature, you should manually add the provider.
 
 ~~~
-Askedio\SoftCascade\Providers\LumenServiceProvider::class,
+JangraViren\SoftCascade\Providers\LumenServiceProvider::class,
 ~~~
 
 
@@ -57,13 +57,13 @@ Askedio\SoftCascade\Providers\LumenServiceProvider::class,
 # Usage
 In your `Model` enable the trait and define `$softCascade`. [Example](https://github.com/Askedio/laravel5-soft-cascade/blob/master/tests/App/User.php).
 ~~~
-use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
+use \JangraViren\SoftCascade\Traits\SoftCascadeTrait;
 
 protected $softCascade = ['profiles'];
 ~~~
 For restricted relation use. [Example](https://github.com/Askedio/laravel5-soft-cascade/blob/master/tests/App/Languages.php).
 ~~~
-use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
+use \JangraViren\SoftCascade\Traits\SoftCascadeTrait;
 
 protected $softCascade = ['addresses@restrict'];
 ~~~
@@ -89,7 +89,7 @@ try {
 } catch (\Exception $e) {
     DB::rollBack(); //Rollback the query
     //Optional, if we need to continue execution only rollback transaction and save message on variable
-    throw new \Askedio\SoftCascade\Exceptions\SoftCascadeLogicException($e->getMessage()); 
+    throw new \JangraViren\SoftCascade\Exceptions\SoftCascadeLogicException($e->getMessage()); 
 }
 ~~~
 

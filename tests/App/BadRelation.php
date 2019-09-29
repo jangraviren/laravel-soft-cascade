@@ -1,6 +1,6 @@
 <?php
 
-namespace Askedio\Tests\App;
+namespace JangraViren\Tests\App;
 
 class BadRelation extends User
 {

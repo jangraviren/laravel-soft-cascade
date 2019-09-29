@@ -1,8 +1,8 @@
 <?php
 
-namespace Askedio\SoftCascade\Listeners;
+namespace JangraViren\SoftCascade\Listeners;
 
-use Askedio\SoftCascade\EloquentSoftCascade;
+use JangraViren\SoftCascade\EloquentSoftCascade;
 
 class CascadeDeleteListener
 {

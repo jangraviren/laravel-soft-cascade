@@ -1,11 +1,11 @@
 <?php
 
-namespace Askedio\SoftCascade;
+namespace JangraViren\SoftCascade;
 
-use Askedio\SoftCascade\Contracts\SoftCascadeable;
-use Askedio\SoftCascade\Exceptions\SoftCascadeLogicException;
-use Askedio\SoftCascade\Exceptions\SoftCascadeNonExistentRelationActionException;
-use Askedio\SoftCascade\Exceptions\SoftCascadeRestrictedException;
+use JangraViren\SoftCascade\Contracts\SoftCascadeable;
+use JangraViren\SoftCascade\Exceptions\SoftCascadeLogicException;
+use JangraViren\SoftCascade\Exceptions\SoftCascadeNonExistentRelationActionException;
+use JangraViren\SoftCascade\Exceptions\SoftCascadeRestrictedException;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphOneOrMany;
 use Illuminate\Support\Facades\DB;

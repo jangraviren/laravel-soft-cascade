@@ -1,6 +1,6 @@
 <?php
 
-namespace Askedio\SoftCascade\Exceptions;
+namespace JangraViren\SoftCascade\Exceptions;
 
 use Illuminate\Support\Arr;
 use RuntimeException;

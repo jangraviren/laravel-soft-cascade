@@ -1,13 +1,13 @@
 <?php
 
-namespace Askedio\Tests\App;
+namespace JangraViren\Tests\App;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Languages extends Model
 {
     use \Illuminate\Database\Eloquent\SoftDeletes;
-    use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
+    use \JangraViren\SoftCascade\Traits\SoftCascadeTrait;
 
     protected $table = 'languages';
 
@@ -17,6 +17,6 @@ class Languages extends Model
 
     public function addresses()
     {
-        return $this->hasMany('Askedio\Tests\App\Addresses');
+        return $this->hasMany('JangraViren\Tests\App\Addresses');
     }
 }

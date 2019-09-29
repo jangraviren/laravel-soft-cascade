@@ -1,6 +1,6 @@
 <?php
 
-namespace Askedio\SoftCascade;
+namespace JangraViren\SoftCascade;
 
 class QueryBuilderSoftCascade extends SoftCascade
 {

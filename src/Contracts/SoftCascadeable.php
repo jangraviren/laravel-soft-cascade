@@ -1,6 +1,6 @@
 <?php
 
-namespace Askedio\SoftCascade\Contracts;
+namespace JangraViren\SoftCascade\Contracts;
 
 interface SoftCascadeable
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Askedio\SoftCascade\Traits;
+namespace JangraViren\SoftCascade\Traits;
 
 trait SoftCascadeTrait
 {

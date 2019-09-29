@@ -1,13 +1,13 @@
 <?php
 
-namespace Askedio\Tests\App;
+namespace JangraViren\Tests\App;
 
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
     use \Illuminate\Database\Eloquent\SoftDeletes;
-    use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
+    use \JangraViren\SoftCascade\Traits\SoftCascadeTrait;
 
     protected $table = 'users';
 
@@ -17,7 +17,7 @@ class User extends Model
 
     public function profiles()
     {
-        return $this->hasMany('Askedio\Tests\App\Profiles');
+        return $this->hasMany('JangraViren\Tests\App\Profiles');
     }
 
     public function role()

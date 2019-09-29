@@ -1,20 +1,20 @@
 <?php
 
-namespace Askedio\Tests;
+namespace JangraViren\Tests;
 
-use Askedio\SoftCascade\Exceptions\SoftCascadeLogicException;
-use Askedio\Tests\App\BadRelation;
-use Askedio\Tests\App\BadRelationAction;
-use Askedio\Tests\App\BadRelationB;
-use Askedio\Tests\App\Category;
-use Askedio\Tests\App\Comment;
-use Askedio\Tests\App\Languages;
-use Askedio\Tests\App\Post;
-use Askedio\Tests\App\Profiles;
-use Askedio\Tests\App\RoleReader;
-use Askedio\Tests\App\RoleWriter;
-use Askedio\Tests\App\User;
-use Askedio\Tests\App\Video;
+use JangraViren\SoftCascade\Exceptions\SoftCascadeLogicException;
+use JangraViren\Tests\App\BadRelation;
+use JangraViren\Tests\App\BadRelationAction;
+use JangraViren\Tests\App\BadRelationB;
+use JangraViren\Tests\App\Category;
+use JangraViren\Tests\App\Comment;
+use JangraViren\Tests\App\Languages;
+use JangraViren\Tests\App\Post;
+use JangraViren\Tests\App\Profiles;
+use JangraViren\Tests\App\RoleReader;
+use JangraViren\Tests\App\RoleWriter;
+use JangraViren\Tests\App\User;
+use JangraViren\Tests\App\Video;
 
 /**
  *  TO-DO: Need better testing.
@@ -133,9 +133,9 @@ class IntegrationTest extends TestCase
         Post::first()->delete();
 
         $this->assertDatabaseHas('videos', ['deleted_at' => null]);
-        $this->assertDatabaseHas('comments', ['commentable_type' => 'Askedio\Tests\App\Video',  'deleted_at' => null]);
+        $this->assertDatabaseHas('comments', ['commentable_type' => 'JangraViren\Tests\App\Video',  'deleted_at' => null]);
         $this->assertDatabaseMissing('posts', ['deleted_at' => null]);
-        $this->assertDatabaseMissing('comments', ['commentable_type' => 'Askedio\Tests\App\Post', 'deleted_at' => null]);
+        $this->assertDatabaseMissing('comments', ['commentable_type' => 'JangraViren\Tests\App\Post', 'deleted_at' => null]);
     }
 
     public function testReportPolymorphicManyRelation()
@@ -146,7 +146,7 @@ class IntegrationTest extends TestCase
         Post::withTrashed()->first()->restore();
 
         $this->assertDatabaseHas('posts', ['deleted_at' => null]);
-        $this->assertDatabaseHas('comments', ['commentable_type' => 'Askedio\Tests\App\Post', 'deleted_at' => null]);
+        $this->assertDatabaseHas('comments', ['commentable_type' => 'JangraViren\Tests\App\Post', 'deleted_at' => null]);
     }
 
     public function testPolymorphicOneRelation()
@@ -156,7 +156,7 @@ class IntegrationTest extends TestCase
         RoleWriter::first()->delete();
 
         $this->assertDatabaseMissing('writers', ['deleted_at' => null]);
-        $this->assertDatabaseMissing('users', ['role_type' => 'Askedio\Tests\App\RoleWriter', 'deleted_at' => null]);
+        $this->assertDatabaseMissing('users', ['role_type' => 'JangraViren\Tests\App\RoleWriter', 'deleted_at' => null]);
     }
 
     public function testRestorePolymorphicOneRelation()
@@ -167,9 +167,9 @@ class IntegrationTest extends TestCase
         RoleWriter::withTrashed()->first()->restore();
 
         $this->assertDatabaseHas('writers', ['deleted_at' => null]);
-        $this->assertDatabaseHas('users', ['role_type' => 'Askedio\Tests\App\RoleWriter', 'deleted_at' => null]);
+        $this->assertDatabaseHas('users', ['role_type' => 'JangraViren\Tests\App\RoleWriter', 'deleted_at' => null]);
         $this->assertDatabaseHas('readers', ['deleted_at' => null]);
-        $this->assertDatabaseHas('users', ['role_type' => 'Askedio\Tests\App\RoleReader', 'deleted_at' => null]);
+        $this->assertDatabaseHas('users', ['role_type' => 'JangraViren\Tests\App\RoleReader', 'deleted_at' => null]);
     }
 
     public function testBadRelation()
@@ -313,6 +313,6 @@ class IntegrationTest extends TestCase
         /*
          * TO-DO: Need a 'test' here, not just code coverage.
          */
-    //     (new \Askedio\SoftCascade\SoftCascade())->cascade('notamodel', 'delete');
+    //     (new \JangraViren\SoftCascade\SoftCascade())->cascade('notamodel', 'delete');
     // }
 }

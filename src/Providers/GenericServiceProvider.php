@@ -1,6 +1,6 @@
 <?php
 
-namespace Askedio\SoftCascade\Providers;
+namespace JangraViren\SoftCascade\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
